@@ -1,4 +1,5 @@
 /* PAGE-SPECIFIC STYLES FOR THE HOME PAGE */
+@import './root.scss';
 
 /*-- -------------------------- -->
 <---       Side By Side         -->
@@ -185,6 +186,10 @@
             .cs-flex-p,
             .cs-name {
                 color: var(--bodyTextColorWhite);
+            }
+
+            .cs-title {
+                @include text-grad();
             }
 
             .cs-flex-group {
