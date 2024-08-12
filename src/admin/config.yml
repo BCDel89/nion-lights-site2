@@ -4,7 +4,7 @@ backend:
 
 local_backend: true
 # change url to a link to the image you want to use, no file paths, must be a URL
-logo_url: https://codestitch.app/frontend/images/logo.png
+logo_url: https://media.licdn.com/dms/image/v2/D5603AQGKMDwBEytjyQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1698533166841?e=1729123200&v=beta&t=whAu61F_sVwUpkhm02hkKW5PNCm2P4hec7dO4CLOrhk
 
 media_folder: "src/assets/images/blog"
 public_folder: "/assets/images/blog"

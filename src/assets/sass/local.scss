@@ -104,6 +104,7 @@
             font-size: clamp(0.875rem, 1.5vw, 1rem);
             line-height: 1.5em;
             color: #353535;
+            text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.56);
         }
 
         .cs-name {
@@ -114,6 +115,7 @@
             line-height: 1.2em;
             font-weight: bold;
             color: var(--headerColor);
+            text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.56);
         }
 
         .cs-job {
@@ -186,6 +188,7 @@
             .cs-flex-p,
             .cs-name {
                 color: var(--bodyTextColorWhite);
+                text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.56);
             }
 
             .cs-title {
@@ -310,6 +313,7 @@
             font-size: clamp(0.875rem, 1.5vw, 1rem);
             line-height: 1.5em;
             color: #353535;
+            text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.56);
         }
 
         .cs-name {
@@ -320,6 +324,7 @@
             line-height: 1.2em;
             font-weight: bold;
             color: var(--headerColor);
+            text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.56);
         }
 
         .cs-job {
@@ -390,6 +395,7 @@
             .cs-flex-p,
             .cs-name {
                 color: var(--bodyTextColorWhite);
+                text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.56);
             }
 
             .cs-flex-group {

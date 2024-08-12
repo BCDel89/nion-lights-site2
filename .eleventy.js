@@ -1,5 +1,7 @@
 // Imports
+const pluginDirectoryOutput = require("@11ty/eleventy-plugin-directory-output");
 const pluginEleventyNavigation = require("@11ty/eleventy-navigation");
+const pluginShopify = require("eleventy-plugin-shopify");
 const pluginMinifier = require("@sherby/eleventy-plugin-files-minifier");
 const pluginSitemap = require("@quasibit/eleventy-plugin-sitemap");
 
@@ -8,6 +10,10 @@ const configCss = require("./src/config/css");
 const configJs = require("./src/config/javascript");
 const configSitemap = require("./src/config/sitemap");
 const configServer = require("./src/config/server");
+const configShopify = require("./src/config/plugins/shopify");
+
+// Filter Imports
+const filterGetProductsInCollection = require("./src/config/filters/getProductsInCollection");
 
 // Other
 const filterPostDate = require("./src/config/postDate");
@@ -42,6 +48,10 @@ module.exports = function (eleventyConfig) {
                   PLUGINS - Adds additional eleventy functionality 
     =======================================================================*/
     /** https://www.11ty.dev/docs/plugins/ */
+    
+    // Provides benchmarks in the terminal when a website is built. Useful for diagnostics.
+    // https://www.11ty.dev/docs/plugins/directory-output/
+    eleventyConfig.addPlugin(pluginDirectoryOutput);
 
     /**
      *  ELEVENTY NAVIGATION
@@ -49,6 +59,10 @@ module.exports = function (eleventyConfig) {
      *  https://github.com/11ty/eleventy-navigation
      */
     eleventyConfig.addPlugin(pluginEleventyNavigation);
+    
+    // Queries your Shopify store at build time to expose product and collection data under the `shopify` global object
+    // https://github.com/dleatherman/eleventy-plugin-shopify
+    eleventyConfig.addPlugin(pluginShopify, configShopify);
 
     /**
      *  AUTOMATIC SITEMAP GENERATION 
@@ -93,6 +107,8 @@ module.exports = function (eleventyConfig) {
      *  https://moment.github.io/luxon/api-docs/index.html#datetime
      */
     eleventyConfig.addFilter("postDate", filterPostDate);
+    eleventyConfig.addFilter("getProductsInCollection", filterGetProductsInCollection);
+
     /**=====================================================================
                                     END FILTERS
     =======================================================================*/
