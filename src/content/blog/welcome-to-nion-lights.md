@@ -14,7 +14,7 @@ tags:
   - festivals
   - burningman
   - edm
-image: /assets/images/blog/about1.jpg
+image: /assets/images/blog/trex.webp
 imageAlt: Enjoying their LED belts at the Nion Lights Launch Party
 ---
 Hello and welcome to all our new customers and fans! We’re thrilled to launch our new website and online store for Nion Lights, where we specialize in crafting unique LED wearable accessories designed to light up your festival nights, rave moments, and every event in between.

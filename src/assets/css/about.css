@@ -546,7 +546,7 @@
     background-color: var(--medium);
   }
   body.dark-mode #cs-navigation .cs-li-link {
-    color: var(--bodyTextColorWhite);
+    color: black;
   }
 }
 /*-- -------------------------- -->
@@ -838,6 +838,9 @@
   #cs-navigation .cs-li-link:hover:before {
     opacity: 1;
     transform: translate(-50%, -50%) scale(1);
+  }
+  #cs-navigation .cs-li-link.cs-active {
+    color: black;
   }
   #cs-navigation .cs-li-link.cs-active:before {
     opacity: 1;
