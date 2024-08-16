@@ -1397,20 +1397,28 @@
         }
 
         .cs-social-link {
-            width: calc(20 / 16 * 1rem);
-            height: calc(20 / 16 * 1rem);
+            //width: calc(20 / 16 * 1rem);
+            //height: calc(20 / 16 * 1rem);
+            width: auto;
+            height: auto;
             margin-left: 12/16rem;
-            background: #a0a3bd;
             border-radius: 50%;
             display: flex;
             justify-content: center;
             align-items: center;
+            background: var(--accent);
+            padding: 10px;
 
             img {
-                height: calc(11 / 16 * 1rem);
+                //height: calc(11 / 16 * 1rem);
+                height: 1.25rem;
                 width: auto;
             }
         }
+
+      .cs-social-link:hover {
+        background: var(--backgroundColor);
+      }
     }
 }
 
@@ -1436,23 +1444,4 @@
         }
     }
 }
-
-/* Dark Mode */
-@media only screen and (min-width: 0rem) {
-    body  {
-        #cs-footer-105 {
-            .cs-link {
-                color: var(--bodyTextColorWhite);
-                &:before {
-                    background: var(--bodyTextColorWhite);
-                }
-            }
-
-            .cs-social-link {
-                background: var(--darkTint);
-            }
-        }
-    }
-}
-
 
