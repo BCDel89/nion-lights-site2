@@ -11,8 +11,12 @@
     --secondary: #995dff;
     --secondaryLight: #6687ff;
     --headerColor: #656565;
-    --bodyTextColor: #4e4b66;
+    --bodyTextColor: #d9d9d9;
     --bodyTextColorWhite: #fafbfc;
+    --backgroundColor: #1a1a1a;
+    --dark: #1a1a1a;
+    --medium: #2c394b;
+    --accent: #334756;
     /* 13px - 16px */
     --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
     /* 31px - 49px */
@@ -20,6 +24,9 @@
     --bodyFontSize: 1rem;
     /* 60px - 100px top and bottom */
     --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+  }
+  body {
+    background: var(--backgroundColor);
   }
   .cs-topper {
     display: block;
@@ -29,7 +36,7 @@
     font-size: var(--topperFontSize);
     line-height: 1.2em;
     font-weight: 700;
-    background: linear-gradient(to right, #30EFE9 0%, #60ffa7 100%);
+    background: linear-gradient(45deg, #30EFE9 0%, #60ffa7 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-align: inherit;
@@ -42,13 +49,13 @@
     line-height: 1.2em;
     font-weight: 900;
     color: var(--headerColor);
-    background: linear-gradient(to right, #30EFE9 0%, #60ffa7 100%);
+    background: linear-gradient(45deg, #30EFE9 0%, #60ffa7 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-align: inherit;
   }
   #home-h {
-    background: linear-gradient(to right, #30EFE9 0%, #60ffa7 100%);
+    background: linear-gradient(45deg, #30EFE9 0%, #60ffa7 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -155,7 +162,7 @@
   }
   p,
   li {
-    color: #353535;
+    color: var(--bodyTextColor);
   }
   a:hover,
   button:hover {
@@ -213,15 +220,15 @@
 <--- -------------------------- -*/
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-  body.dark-mode #dark-mode-toggle .cs-sun {
+  body toggle .cs-sun {
     transform: translate(-50%, -50%);
     opacity: 1;
   }
-  body.dark-mode #dark-mode-toggle .cs-moon {
+  body toggle .cs-moon {
     transform: translate(-50%, -150%);
     opacity: 0;
   }
-  #dark-mode-toggle {
+  toggle {
     display: block;
     position: absolute;
     top: 50%;
@@ -235,8 +242,8 @@
     z-index: 1000;
     transform: translateY(-50%);
   }
-  #dark-mode-toggle img,
-  #dark-mode-toggle svg {
+  toggle img,
+  toggle svg {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -245,12 +252,12 @@
     height: 1.25rem;
     pointer-events: none;
   }
-  #dark-mode-toggle .cs-moon {
+  toggle .cs-moon {
     z-index: 2;
     transition: transform 0.3s, opacity 0.3s;
     fill: #fff;
   }
-  #dark-mode-toggle .cs-sun {
+  toggle .cs-sun {
     z-index: 1;
     transform: translate(-50%, 100%);
     opacity: 0;
@@ -259,14 +266,14 @@
 }
 /* Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
-  #dark-mode-toggle {
+  toggle {
     position: relative;
     transform: none;
     top: auto;
     right: auto;
     margin: 0;
   }
-  #dark-mode-toggle:hover {
+  toggle:hover {
     cursor: pointer;
   }
 }
@@ -532,19 +539,19 @@
 }
 /* Dark Mode */
 @media only screen and (max-width: 63.9375rem) {
-  body.dark-mode #cs-navigation {
+  body #cs-navigation {
     background-color: var(--dark);
   }
-  body.dark-mode #cs-navigation .cs-logo {
+  body #cs-navigation .cs-logo {
     /* makes it white */
   }
-  body.dark-mode #cs-navigation .cs-line {
+  body #cs-navigation .cs-line {
     background-color: #fff;
   }
-  body.dark-mode #cs-navigation .cs-ul-wrapper {
+  body #cs-navigation .cs-ul-wrapper {
     background-color: var(--medium);
   }
-  body.dark-mode #cs-navigation .cs-li-link {
+  body #cs-navigation .cs-li-link {
     color: black;
   }
 }
@@ -999,7 +1006,7 @@
     line-height: 1.2083333333em;
     font-weight: 900;
     color: #fff;
-    background: linear-gradient(to right, #30EFE9 0%, #60ffa7 100%);
+    background: linear-gradient(45deg, #30EFE9 0%, #60ffa7 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-align: center;
@@ -1081,7 +1088,7 @@
 }
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
-  body.dark-mode #cta:after {
+  body #cta:after {
     display: none;
   }
 }
@@ -1188,13 +1195,13 @@
 }
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
-  body.dark-mode #cs-footer-105 .cs-link {
+  body #cs-footer-105 .cs-link {
     color: var(--bodyTextColorWhite);
   }
-  body.dark-mode #cs-footer-105 .cs-link:before {
+  body #cs-footer-105 .cs-link:before {
     background: var(--bodyTextColorWhite);
   }
-  body.dark-mode #cs-footer-105 .cs-social-link {
+  body #cs-footer-105 .cs-social-link {
     background: var(--darkTint);
   }
 }
@@ -1291,7 +1298,7 @@
     letter-spacing: 0.1rem;
     font-weight: 700;
     color: var(--bodyTextColorWhite);
-    background: linear-gradient(to right, #30EFE9 0%, #60ffa7 100%);
+    background: linear-gradient(45deg, #30EFE9 0%, #60ffa7 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 1rem;
@@ -1306,7 +1313,7 @@
     width: 100%;
     /* 32px - 40px */
     margin: 0 auto clamp(2rem, 4vw, 2.5rem) 0;
-    background: linear-gradient(to right, #30EFE9 0%, #60ffa7 100%);
+    background: linear-gradient(45deg, #30EFE9 0%, #60ffa7 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     position: relative;

@@ -103,7 +103,7 @@
             /* 14px - 16px */
             font-size: clamp(0.875rem, 1.5vw, 1rem);
             line-height: 1.5em;
-            color: #353535;
+            color:  var(--bodyTextColor);
             text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.56);
         }
 
@@ -122,7 +122,7 @@
             display: block;
             font-size: calc(14 / 16 * 1rem);
             line-height: 1.5em;
-            color: #353535;
+            color:  var(--bodyTextColor);
         }
 
         .cs-quote-icon {
@@ -163,7 +163,7 @@
 
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
-    body.dark-mode {
+    body  {
         #sbs {
             .cs-left {
                 &:before,
@@ -312,7 +312,7 @@
             /* 14px - 16px */
             font-size: clamp(0.875rem, 1.5vw, 1rem);
             line-height: 1.5em;
-            color: #353535;
+            color:  var(--bodyTextColor);
             text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.56);
         }
 
@@ -331,7 +331,7 @@
             display: block;
             font-size: calc(14 / 16 * 1rem);
             line-height: 1.5em;
-            color: #353535;
+            color:  var(--bodyTextColor);
         }
 
         .cs-quote-icon {
@@ -370,7 +370,7 @@
 
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
-    body.dark-mode {
+    body  {
         #sbs-r {
             .cs-left {
                 &:before,
@@ -533,7 +533,7 @@
 
 /* Dark mode */
 @media only screen and (min-width: 0rem) {
-    body.dark-mode {
+    body  {
         #gallery {
             .cs-title {
                 color: var(--bodyTextColorWhite);
@@ -638,7 +638,7 @@
             display: block;
             font-size: calc(14 / 16 * 1rem);
             font-weight: 400;
-            color: var(#353535);
+            color: var( var(--bodyTextColor));
         }
 
         .cs-item-stars {
@@ -667,7 +667,7 @@
 
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
-    body.dark-mode {
+    body  {
         #reviews {
             .cs-title,
             .cs-text,

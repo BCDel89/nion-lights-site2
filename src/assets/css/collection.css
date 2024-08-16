@@ -117,9 +117,11 @@
         transform-style: preserve-3d;
     }
     #collection .cs-item {
-        max-width: 18.5rem;
+        max-width: 28.5rem;
         padding: 1rem;
         border: 1px solid #e8e8e8;
+        /*border: 1px solid var(--primary);*/
+        /*border: 1px solid linear-gradient(45deg, #30EFE9 0%, #60ffa7 100%);*/
     }
     #collection .cs-item:hover .cs-picture img {
         transform: scale(1.05);
@@ -207,21 +209,25 @@
 /* Small Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
     #collection .cs-card-group {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
-    body.dark-mode #collection .cs-offer,
-    body.dark-mode #collection .cs-product,
-    body.dark-mode #collection .cs-price,
-    body.dark-mode #collection .cs-old-price {
+    body  #collection .cs-offer,
+    body  #collection .cs-product,
+    body  #collection .cs-price,
+    body  #collection .cs-old-price {
         color: var(--bodyTextColorWhite);
+        /*color: var(--primary);*/
     }
-    body.dark-mode #collection .cs-item:hover .cs-picture {
+    body  #collection  .cs-price {
+        color: var(--primaryLight);
+    }
+    body  #collection .cs-item:hover .cs-picture {
         background-color: rgba(255, 255, 255, 0.2);
     }
-    body.dark-mode #collection .cs-picture {
+    body  #collection .cs-picture {
         background-color: rgba(255, 255, 255, 0.1);
     }
 }

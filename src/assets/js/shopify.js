@@ -42,7 +42,7 @@ window.shopify.productId &&
                     quantityInput: "cs-quantity-input",
                     quantityIncrement: "cs-quantity-increment",
                     buttonWrapper: "cs-button-wrapper",
-                    button: "cs-button cs-buy",
+                    button: "cs-button cs-button-solid cs-buy",
                 },
             },
             option: {

@@ -267,7 +267,7 @@
         mix-blend-mode: screen;
     }
     #sbs-297 .cs-number:before {
-        /* opaque white box - For mix-blend-mode to work, we need the 
+        /* opaque white box - For mix-blend-mode to work, we need the
                      white box inside the .cs-number, so we use a pseudo element.
                      We DON'T add a position to the cs-number so the pseudo positions
                      itself relative to the .cs-box, which has position relative. This
@@ -343,17 +343,17 @@
 }
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
-    body.dark-mode #sbs-297 .cs-topper {
+    body  #sbs-297 .cs-topper {
         color: var(--secondaryLight);
     }
-    body.dark-mode #sbs-297 .cs-title,
-    body.dark-mode #sbs-297 .cs-text {
+    body  #sbs-297 .cs-title,
+    body  #sbs-297 .cs-text {
         color: var(--bodyTextColorWhite);
     }
-    body.dark-mode #sbs-297 .cs-link {
+    body  #sbs-297 .cs-link {
         color: var(--secondaryLight);
     }
-    body.dark-mode #sbs-297 .cs-text {
+    body  #sbs-297 .cs-text {
         opacity: 0.8;
     }
 }
@@ -496,14 +496,14 @@
 }
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
-    body.dark-mode #stats-1642 .cs-title,
-    body.dark-mode #stats-1642 .cs-text,
-    body.dark-mode #stats-1642 .cs-item-text,
-    body.dark-mode #stats-1642 .cs-h3 {
+    body  #stats-1642 .cs-title,
+    body  #stats-1642 .cs-text,
+    body  #stats-1642 .cs-item-text,
+    body  #stats-1642 .cs-h3 {
         color: var(--bodyTextColorWhite);
     }
-    body.dark-mode #stats-1642 .cs-text,
-    body.dark-mode #stats-1642 .cs-item-text {
+    body  #stats-1642 .cs-text,
+    body  #stats-1642 .cs-item-text {
         opacity: 0.8;
     }
 }
@@ -612,10 +612,10 @@
 }
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
-    body.dark-mode #sbs-1640 {
+    body  #sbs-1640 {
         background-color: rgba(0, 0, 0, 0.6);
     }
-    body.dark-mode #sbs-1640 .cs-stats-group:before {
+    body  #sbs-1640 .cs-stats-group:before {
         background-color: var(--dark);
     }
 }

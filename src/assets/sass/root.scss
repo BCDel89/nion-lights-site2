@@ -1,7 +1,10 @@
 /* CODESTITCH STYLES, RESET, HEADER/NAVIGATION AND FOOTER */
 
 @mixin text-grad() {
-    background: linear-gradient(to right, #30EFE9 0%, #60ffa7 100%);
+    //background: linear-gradient(to right, #a900c5 0%, #00d9ff 20%, #00ff72 40%, #fffa04 60%, #f65636 80%, #f401e5 100%);
+    //background: radial-gradient(#a900c5 0%, #00d9ff 20%, #00ff72 40%, #fffa04 60%, #f65636 80%, #f401e5 100%);
+    //background: linear-gradient(45deg, #a900c5 0%, #00d9ff 20%, #00ff72 40%, #fffa04 60%, #f65636 80%, #f401e5 100%);
+    background: linear-gradient(45deg, #30EFE9 0%, #60ffa7 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -20,8 +23,12 @@
     --secondary: #995dff;
     --secondaryLight: #6687ff;
     --headerColor: #656565;
-    --bodyTextColor: #4e4b66;
+    --bodyTextColor: #d9d9d9;
     --bodyTextColorWhite: #fafbfc;
+    --backgroundColor: #1a1a1a;
+    --dark: #1a1a1a;
+    --medium: #2c394b;
+    --accent: #334756;
 
     /* 13px - 16px */
     --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
@@ -31,6 +38,10 @@
 
     /* 60px - 100px top and bottom */
     --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+  }
+
+  body {
+    background: var(--backgroundColor);
   }
 
   // Text styles - can be replaced using CodeStitch's "Content Flair" Stitches
@@ -185,7 +196,7 @@
 
     p,
     li {
-        color: #353535;
+        color:  var(--bodyTextColor);
     }
 
     a,
@@ -257,8 +268,8 @@
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-  body.dark-mode {
-    #dark-mode-toggle {
+  body  {
+     toggle {
       .cs-sun {
         transform: translate(-50%, -50%);
         opacity: 1;
@@ -271,7 +282,7 @@
     }
   }
 
-  #dark-mode-toggle {
+   toggle {
     display: block;
     position: absolute;
     top: 50%;
@@ -320,7 +331,7 @@
 
 /* Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
-  #dark-mode-toggle {
+   toggle {
     position: relative;
     transform: none;
     top: auto;
@@ -650,7 +661,7 @@
 
 /* Dark Mode */
 @media only screen and (max-width: 63.9375rem) {
-  body.dark-mode {
+  body  {
     #cs-navigation {
       background-color: var(--dark);
 
@@ -1298,7 +1309,7 @@
 
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
-    body.dark-mode {
+    body  {
         #cta {
             &:after {
                 display: none;
@@ -1428,7 +1439,7 @@
 
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
-    body.dark-mode {
+    body  {
         #cs-footer-105 {
             .cs-link {
                 color: var(--bodyTextColorWhite);
