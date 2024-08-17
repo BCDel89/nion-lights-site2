@@ -43,6 +43,7 @@ module.exports = {
 
         return data.shopify.products.map((product) => {
             // Removes the edges/node from the GQL structure
+            // console.log('product: ', product);
             const newImages = [];
             product.images.edges.forEach((image) => newImages.push(image.node));
 
