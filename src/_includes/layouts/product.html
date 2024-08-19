@@ -42,7 +42,8 @@
 <!--                <img src="{{ shopProduct.images[0].src }}" alt="sofa product" loading="lazy" decoding="async" width="490" height="596">-->
             </picture>
             <div class="cs-product-info">
-                <h3 class="cs-h3">{{ shopProduct.title | truncate(30) }}</h3>
+<!--                <h3 class="cs-h3">{{ shopProduct.title | truncate(30) }}</h3>-->
+                <h3 class="cs-h3">{{ shopProduct.title.split(' ').slice(0,5).join(' ') }}</h3>
                 <h4 class="cs-h4">{{ shopProduct.title }}</h4>
                 <br>
                 <span class="cs-price">{{ shopProduct.price }}</span>

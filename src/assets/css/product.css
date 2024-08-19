@@ -105,7 +105,9 @@
     #product .cs-large-image {
         width: 100%;
         /* 248px - 533px */
-        height: clamp(15.5rem, 70vw, 33.3125rem);
+        /*height: clamp(15.5rem, 70vw, 33.3125rem);*/
+        height: auto;
+        padding-bottom: 25px;
         display: block;
     }
     #product .cs-large-image img {

@@ -1282,6 +1282,10 @@
   display: none;
 }
 
+.carousel .flickity-page-dots .dot {
+  background-color: var(--primary);
+}
+
 /*-- -------------------------- -->
 <---       Side By Side         -->
 <--- -------------------------- -*/

@@ -117,11 +117,12 @@
         transform-style: preserve-3d;
     }
     #collection .cs-item {
+        position: relative;
         max-width: 28.5rem;
         width: 100%;
         padding: 1rem;
         /*border: 1px solid #e8e8e8;*/
-        border: 1px solid #43433b;
+        /*border: 1px solid #43433b;*/
         /*border: 1px solid var(--primary);*/
         /*border: 1px solid linear-gradient(45deg, #30EFE9 0%, #60ffa7 100%);*/
         border-radius: 20px;
@@ -189,10 +190,13 @@
         align-items: center;
     }
     #collection .cs-price {
-        font-size: 2rem;
+        font-size: 1.5rem;
         font-weight: 700;
         line-height: 1.2em;
         color: var(--primary);
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
     }
     #collection .cs-old-price {
         font-size: 1rem;
@@ -214,7 +218,7 @@
     }
 }
 /* Small Desktop - 1024px */
-@media only screen and (min-width: 64rem) {
+@media only screen and (max-width: 70rem) {
     #collection .cs-card-group {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -223,6 +227,12 @@
 @media only screen and (min-width: 100rem) {
     #collection .cs-card-group {
         grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media only screen and (max-width: 45rem) {
+    #collection .cs-card-group {
+        grid-template-columns: repeat(1, 1fr);
     }
 }
 /* Dark Mode */
@@ -235,12 +245,23 @@
         /*color: var(--primary);*/
     }
     body  #collection  .cs-price {
-        color: var(--primaryLight);
+        /*color: var(--primaryLight);*/
+        color: var(--primary);
     }
     body  #collection .cs-item:hover .cs-picture {
         background-color: rgba(255, 255, 255, 0.2);
     }
     body  #collection .cs-picture {
         background-color: rgba(255, 255, 255, 0.1);
+    }
+}
+
+#collection {
+    div.cs-details {
+        padding-top: 15px;
+    }
+    div.cs-details h4 {
+        min-height: 7rem;
+        padding-bottom: 15px;
     }
 }
