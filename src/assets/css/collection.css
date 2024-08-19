@@ -264,4 +264,7 @@
         min-height: 7rem;
         padding-bottom: 15px;
     }
+    .cs-link {
+        display: contents;
+    }
 }
