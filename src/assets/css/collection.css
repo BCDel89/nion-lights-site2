@@ -118,10 +118,14 @@
     }
     #collection .cs-item {
         max-width: 28.5rem;
+        width: 100%;
         padding: 1rem;
-        border: 1px solid #e8e8e8;
+        /*border: 1px solid #e8e8e8;*/
+        border: 1px solid #43433b;
         /*border: 1px solid var(--primary);*/
         /*border: 1px solid linear-gradient(45deg, #30EFE9 0%, #60ffa7 100%);*/
+        border-radius: 20px;
+        background: rgba(5, 5, 5, 0.75);
     }
     #collection .cs-item:hover .cs-picture img {
         transform: scale(1.05);
@@ -135,8 +139,9 @@
     }
     #collection .cs-image-group {
         width: auto;
-        height: 18.75rem;
-        margin-bottom: 1.25rem;
+        /*height: 18.75rem;*/
+        height: auto;
+        margin-bottom: 2.25rem;
         position: relative;
     }
     #collection .cs-picture {
@@ -184,7 +189,7 @@
         align-items: center;
     }
     #collection .cs-price {
-        font-size: 1.25rem;
+        font-size: 2rem;
         font-weight: 700;
         line-height: 1.2em;
         color: var(--primary);
@@ -200,16 +205,24 @@
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
     #collection .cs-item {
+        width: 100%;
         max-width: none;
     }
     #collection .cs-image-group {
-        height: clamp(12rem, 23vw, 20rem);
+        /*height: clamp(12rem, 23vw, 20rem);*/
+        height: auto;
     }
 }
 /* Small Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
     #collection .cs-card-group {
         grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (min-width: 100rem) {
+    #collection .cs-card-group {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 /* Dark Mode */

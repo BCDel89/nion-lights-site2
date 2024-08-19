@@ -10,7 +10,7 @@
     <!-- ============================================ -->
 
     <section id="int-hero">
-        <h1 id="home-h">{{ shopCollection.title }}</h1>
+        <h1 id="home-h">Nion Lights Shop</h1>
         <picture>
             <source media="(max-width: 600px)" srcset="/assets/images/bkg2_sm.webp">
             <source media="(min-width: 601px)" srcset="/assets/images/bkg2_sm.webp">
@@ -28,17 +28,29 @@
                 {% for product in shopProducts | getProductsInCollection(shopCollection.idNumber) %}
                     {% if product.images | length > 0 %}
                         <div class="cs-item">
-                            <a href="/shop/{{ product.handle }}" class="cs-link">
+<!--                            <a href="/shop/{{ product.handle }}" class="cs-link">-->
                                 <div class="cs-image-group">
-                                    <picture class="cs-picture">
-                                        <img loading="lazy" decoding="async" src="{{ product.images[0].src }}" alt="{{ product.images[0].altText or 'a product from Gill Rush' }}" width="1280" height="568">
-                                    </picture>
+                                    <div class="carousel js-flickity" data-flickity-options='{ "wrapAround": true }'>
+                                    {% for image in product.images %}
+                                        <div class="carousel-cell">
+                                            <picture class="cs-picture">
+                                                <a href="/shop/{{ product.handle }}" class="cs-link">
+                                                <img loading="lazy" decoding="async" src="{{ image.src }}" alt="{{ image.altText or 'a product from Nion Lights' }}" width="1280" height="568">
+                                                </a>
+                                            </picture>
+                                        </div>
+                                    {% endfor %}
+                                    </div>
+<!--                                    <picture class="cs-picture">-->
+<!--                                        <img loading="lazy" decoding="async" src="{{ product.images[0].src }}" alt="{{ product.images[0].altText or 'a product from Gill Rush' }}" width="1280" height="568">-->
+<!--                                    </picture>-->
                                     {% if product.saleAmount %}
                                         <span class="cs-offer">
                                             {{ product.saleAmount }}% Off!
                                         </span>
                                     {% endif %}
                                 </div>
+                               <a href="/shop/{{ product.handle }}" class="cs-link">
                                 <div class="cs-details">
                                     <h3 class="cs-product">{{ product.title }}</h3>
                                     <div class="cs-wrapper">
@@ -50,7 +62,8 @@
                                         </div>
                                     </div>
                                 </div>
-                            </a>
+                               </a>
+<!--                            </a>-->
                         </div>
                     {% endif %}
                 {% endfor %}
