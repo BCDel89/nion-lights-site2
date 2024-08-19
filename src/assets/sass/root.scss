@@ -37,7 +37,7 @@
     --bodyFontSize: 1rem;
 
     /* 60px - 100px top and bottom */
-    --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+    --sectionPadding: clamp(5.75rem, 9.82vw, 6.25rem) 1rem;
   }
 
   body {
@@ -1451,7 +1451,7 @@
 
 .carousel-cell {
   width: 75%;
-  height: 200px;
+  height: 350px;
   /* flex-box, center image in cell */
   display: -webkit-box;
   display: -webkit-flex;
